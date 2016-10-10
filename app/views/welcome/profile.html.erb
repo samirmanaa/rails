@@ -1,0 +1,20 @@
+<% provide(:title, current_user.email) %>
+<div class="row">
+.
+.
+.
+<aside>
+.
+.
+.
+</aside>
+<div class="span8">
+<% if current_user.courses.any? %>
+<h3>Courses (<%= current_user.courses.count %>)</h3>
+<ol class="courses">
+<%= render @courses %>
+</ol>
+<%= will_paginate @courses %>
+<% end %>
+</div>
+</div>

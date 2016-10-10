@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col-md-4"><h4><%= course.name %></h4></div>
+  <div class="col-md-2 col-md-offset-6">
+    <div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Options
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#">Show</a></li>
+    <li><a href="#">Edit</a></li>
+    <li><a href="#">Delete</a></li>
+    <li role="separator" class="divider"></li>
+    <li><%= link_to "Join", join_course_path(course) %></li>
+  </ul>
+</div>
+  </div>
+  <div class="col-md-12"><%= course.description %></div>
+  <div class="col-md-4 col-md-offset-8">Posted <%= time_ago_in_words(course.created_at) %> ago.</div>
+</div>

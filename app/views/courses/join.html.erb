@@ -1,0 +1,27 @@
+<div class="btn-group" role="group" aria-label="...">
+  <button type="button" class="btn btn-primary" id="publish">Publish</button>
+  <button type="button" class="btn btn-default" id="unpublish">Unpublish</button>
+  <button type="button" class="btn btn-danger" id="disconnect">Disconnect</button>
+</div>
+<script>
+$(document).on('turbolinks:load', function() {
+connect();
+
+$('#publish').click(function(){
+  publish();
+});
+
+$('#unpublish').click(function(){
+  unpublish();
+});
+
+$('#discoonect').click(function(){
+  disconnect();
+});
+
+});
+</script>
+
+<div id="subscriberContainer">
+  <div id="publisherContainer"></div>
+</div>
